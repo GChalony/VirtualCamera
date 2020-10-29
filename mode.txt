@@ -1,0 +1,9 @@
+0
+
+# CHOOSE MODE BY CHANGING NUMBER AT THE TOP
+
+# 0: normal cam
+# 1: Video
+# 2: Canny
+# 3: Contours
+# 4: Matrix
