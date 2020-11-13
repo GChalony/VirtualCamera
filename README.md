@@ -20,3 +20,6 @@ There are several transforms defined in `transform.py` which transform the webca
 python3 customCam.py
 ```
  
+## Reference
+
+[StackOverflow thread listing solutions to view /dev/video2 output](https://superuser.com/questions/1330959/what-is-the-right-ffmpeg-output-format-for-a-v4l2-loopback-device).
