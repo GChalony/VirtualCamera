@@ -22,4 +22,4 @@ python3 customCam.py
  
 ## Reference
 
-[StackOverflow thread listing solutions to view /dev/video2 output](https://superuser.com/questions/1330959/what-is-the-right-ffmpeg-output-format-for-a-v4l2-loopback-device).
+[StackOverflow thread listing solutions to view /dev/video2 output](https://superuser.com/questions/1330959/what-is-the-right-ffmpeg-output-format-for-a-v4l2-loopback-device), easiest being `ffplay -f v4l2 /dev/video2`.
