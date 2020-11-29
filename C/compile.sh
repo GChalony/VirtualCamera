@@ -1,2 +1,1 @@
-#!bin/bash
-g++ -ggdb Transforms.cpp main.cpp `pkg-config --cflags --libs opencv4`
+g++ main.cpp Transforms.cpp ModeToggler.cpp `pkg-config --cflags --libs opencv4` -o VirtualWebcam  && echo "Compiled!"
