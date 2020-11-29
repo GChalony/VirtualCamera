@@ -6,12 +6,14 @@
 #include <unistd.h>
 #include <iostream>
 #include "Transforms.h"
+#include "ModeToggler.h"
 
 using namespace std;
 
 #define FPS 30
 
-#define HEIGHT 480
+// Camera resolution
+#define HEIGHT 480 
 #define WIDTH 640
 #define BYTES WIDTH * HEIGHT * 3
 
@@ -63,9 +65,12 @@ void loop(CameraOutput &input, int output){
 }
 
 int main(){
-    StaticVideoCameraOutput in = StaticVideoCameraOutput("../data/record.webm", WIDTH, HEIGHT);
+    // StaticVideoCameraOutput in = StaticVideoCameraOutput("../data/record.webm", WIDTH, HEIGHT);
+    // CannyCameraOutput in = CannyCameraOutput(50, 100);
+    ModeToggler in = ModeToggler("../mode.txt");
 
     int out = setupVirtualCam("/dev/video2");
-
+    
+    cout << "Started\n";
     loop(in, out);
 }
