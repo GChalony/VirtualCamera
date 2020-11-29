@@ -1,6 +1,15 @@
 .idea
+.vscode
 .ipynb_checkpoints
 __pycache__
 *.jpg
 *.gif
 *.ipynb
+
+data
+
+C/a.out
+C/test
+
+*.swp
+*.swo

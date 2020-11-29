@@ -1,4 +1,4 @@
-2
+4
 
 # CHOOSE MODE BY CHANGING NUMBER AT THE TOP
 
@@ -7,3 +7,11 @@
 # 2: Canny
 # 3: Contours
 # 4: Matrix
+
+# ===  Args - one per line ===
+#../data/sample.mp4
+#40
+#90
+0.8
+300
+
