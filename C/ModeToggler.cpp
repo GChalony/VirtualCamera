@@ -7,6 +7,7 @@
 #include <opencv2/core.hpp>
 #include "Transforms.h"
 #include "ModeToggler.h"
+#include "utils.h"
 
 using namespace std;
 
@@ -37,12 +38,8 @@ bool ModeChecker::update(){
     getline(modeFile, buffer);
     mode = atoi(buffer.c_str());
     args.clear();
-    
-    while (getline(modeFile, buffer)){
-        if (buffer.size() > 0 && buffer[0] != '#'){
-            args.push_back(buffer);
-        }
-    }
+
+    extractArgs(modeFile, mode, args);
     
     modeFile.close();
     return true;
@@ -59,7 +56,7 @@ uchar *ModeToggler::nextData(){
     i++;
     if (i % RELOAD_NUMBER == 0){
         if(modeChecker.update()){
-            cout << "Changed mode! " << modeChecker.mode << endl;
+            cout << "\nChanged mode! " << modeChecker.mode << ", args: " << vector_to_str(modeChecker.args) << "\n";
             delete cameraOutputInstance;
             createInstance(modeChecker.mode, modeChecker.args);
         }
@@ -85,6 +82,7 @@ void ModeToggler::createInstance(int mode, vector<string>& args){
         case 3:
             {
                 int th1 = atoi(args[0].c_str()), th2 = atoi(args[1].c_str());
+                
                 cameraOutputInstance = new CannyCameraOutput(th1, th2);
             }
             break;

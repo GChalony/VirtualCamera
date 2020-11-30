@@ -1,17 +1,26 @@
-4
+0
 
 # CHOOSE MODE BY CHANGING NUMBER AT THE TOP
 
 # 0: normal cam
-# 1: Video
-# 2: Canny
-# 3: Contours
+# 1: Static video
+# 2: Static image
+# 3: Canny
 # 4: Matrix
+# 5: Defomation
 
-# ===  Args - one per line ===
-#../data/sample.mp4
-#40
-#90
-0.8
-300
+# ===  Args - YAMLish style ===
+1:
+    ../data/sample.mp4
+
+2:
+    ../data/me.jpg
+
+3:
+    40
+    90
+
+5:
+    1.6
+    100
 
