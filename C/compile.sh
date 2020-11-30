@@ -1,1 +1,1 @@
-g++ main.cpp Transforms.cpp ModeToggler.cpp `pkg-config --cflags --libs opencv4` -o VirtualWebcam  && echo "Compiled!"
+g++ main.cpp Transforms.cpp ModeToggler.cpp utils.cpp `pkg-config --cflags --libs opencv4` -o VirtualWebcam  && echo "Compiled!"
